@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>虚無クイズ</title>
+</head>
+
+<body>
+	<p style="text-align: center">
+		以下はあるプログラミング言語で記述されたスクリプトである。どのように出力されるか、そのまま解答せよ。なお、スクリプト部分は左詰めとなっている。
+    本当のソースコード見たら難読化してないのである程度知識があれば答えが分かっちゃいます。つまりそういうことです。
+	</p>
+	<pre><code>
+ここからスクリプト
+   		   	 
+	
+     		 		  
+	
+     		    	
+	
+     		 			 
+	
+     		 	 		
+	
+  
+
+
+ここまでスクリプト
+	</code></pre>
+	<input type="text" id = "answer" onkeydown="keydown_enter();">
+	<button type="button" onclick="check();" id = "submit">解答する</button>
+	<script>
+		function keydown_enter(){
+			if(window.event.keyCode == 13) {
+				document.getElementById("submit").click();
+			}
+		}
+		function check(){
+			var ans = document.getElementById('answer').value;
+			if(ans == "blank"){
+				alert("正解です！");
+			}
+			else{
+				alert("不正解です。");
+			}
+		}
+	</script>
+</body>
+</html>
